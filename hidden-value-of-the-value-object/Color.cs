@@ -1,6 +1,6 @@
 using System;
 
-namespace Cognifide.SelfService
+namespace CarDomain
 {
     public class Color
     {

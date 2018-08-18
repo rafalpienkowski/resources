@@ -4,8 +4,11 @@ namespace Cognifide.SelfService
 {
     public class Color
     {
+        public readonly struct Color: IEquatable<Color>
+    {
         public Color(string hue, bool metallic)
         {
+            BasicPallete = false;
             Hue = hue;
             Metallic = metallic;
             if (hue == "white" && !metallic)
@@ -25,7 +28,8 @@ namespace Cognifide.SelfService
 
         public override bool Equals(object obj)
         {
-            return this.Equals(obj as Color);
+            if (!(obj is Color)) return false;
+            return this.Equals((Color)obj);
         }
 
         public bool Equals(Color otherColor)

@@ -1,6 +1,6 @@
 using System;
 
-namespace CarDomain
+namespace Car.Domain
 {
     public class Color
     {
